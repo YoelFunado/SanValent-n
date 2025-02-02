@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Ti 💖</title>
+    <link rel="stylesheet" href="estilos.css"> <!-- Enlace a tu archivo de estilos -->
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #121212;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            animation: fadeIn 2s ease-in-out;
+            display: none; /* Ocultar el contenido inicialmente */
+        }
+
+        p {
+            font-size: 1.5em;
+            line-height: 1.6;
+        }
+
+        .love {
+            font-size: 2em;
+            font-weight: bold;
+            color: #ff4d6d;
+            text-shadow: 0 0 10px #ff4d6d;
+        }
+
+        .flores {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .flor {
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+            animation: bloom 2s infinite;
+        }
+
+        .tulipan {
+            background-color: #ff79b0;
+            border-radius: 50%;
+        }
+
+        .rosa {
+            background-color: #ff4d6d;
+            border-radius: 50%;
+        }
+
+        .girasol {
+            background-color: #f2a900;
+            border-radius: 50%;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bloom {
+            0% {
+                transform: scale(0);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .recuerdos {
+            margin-top: 30px;
+        }
+
+        .galeria {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .foto {
+            margin: 10px;
+            width: 200px;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .foto:hover {
+            transform: scale(1.1);
+        }
+
+        .button-container {
+            margin-top: 30px;
+        }
+
+        .accept-btn {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            background-color: #ff4d6d;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .accept-btn:hover {
+            background-color: #ff79b0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Botón de aceptación -->
+    <div class="button-container">
+        <button class="accept-btn" id="acceptBtn">Click para aceptar</button>
+    </div>
+
+    <!-- Contenido oculto inicialmente -->
+    <div class="container">
+        <p>Hola mi amor! 💖</p>
+        <p>Gracias por aceptar estar conmigo un año más mi Thany.  
+        Espero que sean muchos más y podamos disfrutar de esta vida juntos, que no importe el camino difícil ni las adversidades.</p>
+
+        <p>Espero ser la mejor versión de mí para ti, y creo que tú quieres lo mismo.  
+        Aunque hemos vivido momentos difíciles y estuvimos a punto de tomar decisiones incorrectas, ambos hemos madurado juntos y hemos podido crecer de igual manera.</p>
+
+        <p>Aunque no soy bueno con las palabras, me gusta dedicarte mis textos cada que puedo.  
+        Es un sentimiento muy lindo el escribirte mientras pienso en tu reacción.  
+        Muchas gracias por compartir estos años de tu vida conmigo, cielo.</p>
+
+        <p>Y aunque no lo quieras aceptar, me enorgullece ver tus avances, tus logros y cómo te levantas una y otra vez.  
+        Sé que te puede parecer cansado, pero yo lo veo en ti: tienes esa chispa, esa motivación de seguir adelante, y por esto te admiro muchísimo.  
+        Eres una gran persona, un excelente novio/novia, pareja, compañero/a de vida... Para todo eres excelente, y eso lo admiro mucho.</p>
+
+        <p>No tengo más que decir, solo que...</p>
+
+        <p class="love">¡TE AMO! ❤️</p>
+    </div>
+
+    <!-- Flores -->
+    <div class="flores">
+        <img src="tulipan.svg" class="flor tulipan">
+        <img src="rosa.svg" class="flor rosa">
+        <img src="girasol.svg" class="flor girasol">
+    </div>
+
+    <!-- Recuerdos -->
+    <div class="recuerdos">
+        <h2>Aquí tienes algunos de nuestros recuerdos:</h2>
+        <div class="galeria">
+            <img src="nv1.jpg" alt="Recuerdo 1" class="foto">
+            <img src="nv2.png" alt="Recuerdo 2" class="foto">
+            <img src="nv3.png" alt="Recuerdo 3" class="foto">
+            <img src="nv4.png" alt="Recuerdo 4" class="foto">
+            <img src="nv5.jpg" alt="Recuerdo 5" class="foto">
+            <img src="nv6.jpg" alt="Recuerdo 6" class="foto">
+            <img src="nv7.jpg" alt="Recuerdo 7" class="foto">
+            <img src="nv8.jpg" alt="Recuerdo 8" class="foto">
+            <img src="nv9.jpg" alt="Recuerdo 9" class="foto">
+            <img src="nv10.jpg" alt="Recuerdo 10" class="foto">
+        </div>
+    </div>
+
+    <!-- Reproductor de música -->
+    <audio id="music" preload="auto">
+        <source src="Stray Kids Lose My Breath (Stray Kids Ver.) Live Video.mp3" type="audio/mp3">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <script>
+        document.getElementById("acceptBtn").onclick = function() {
+            document.querySelector(".container").style.display = "block"; // Mostrar el contenido
+            document.getElementById("music").play(); // Reproducir música
+            document.querySelector(".button-container").style.display = "none"; // Ocultar el botón
+        }
+    </script>
+</body>
+</html>

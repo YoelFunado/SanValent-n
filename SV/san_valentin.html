@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>San Valentín 💖</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            color: white;
+            flex-direction: column;
+        }
+
+        .container {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            background: linear-gradient(90deg, #ffffff, #ffebf0);
+            -webkit-background-clip: text;
+            color: transparent;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        .btn {
+            font-size: 1.5em;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-yes {
+            background-color: #ff4d6d;
+            color: white;
+        }
+
+        .btn-yes:hover {
+            background-color: #ff1e4d;
+        }
+
+        .btn-no {
+            background-color: #cccccc;
+            color: black;
+            position: absolute;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¿Quieres ser mi Valentín otro año más? 💗</h1>
+        <div class="buttons">
+            <button class="btn btn-yes" onclick="irAMensaje()">Sí 💖</button>
+            <button class="btn btn-no" id="noBtn" onmouseover="moverBoton()">No 💔</button>
+        </div>
+    </div>
+
+    <script>
+        function irAMensaje() {
+            window.location.href = "mensaje.html";
+        }
+
+        function moverBoton() {
+            let btnNo = document.getElementById("noBtn");
+            let x = Math.random() * (window.innerWidth - 100);
+            let y = Math.random() * (window.innerHeight - 50);
+            btnNo.style.left = `${x}px`;
+            btnNo.style.top = `${y}px`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+.flores {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Para que no bloqueen clics */
+    overflow: hidden;
+}
+
+/* Estilos base para todas las flores */
+.flor {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    opacity: 0;
+    animation: florecer 3s ease-in-out forwards;
+}
+
+
+
+/* Rosa - 5 pétalos */
+.rosa {
+    bottom: 10%;
+    right: 5%;
+    background: red;
+    border-radius: 50%;
+    box-shadow: 
+        30px 0 0 0 red,  /* Pétalo derecho */
+        -30px 0 0 0 red, /* Pétalo izquierdo */
+        0 30px 0 0 red,  /* Pétalo inferior */
+        0 -30px 0 0 red, /* Pétalo superior */
+        20px 20px 0 0 red, /* Pétalo superior derecho */
+        -20px 20px 0 0 red; /* Pétalo inferior izquierdo */
+    animation-delay: 1s;
+}
+
+/* Girasol - con 12 pétalos */
+.girasol {
+    top: 50%;
+    left: 90%;
+    background: yellow;
+    border-radius: 50%;
+    box-shadow: 
+        40px 0 0 0 orange,  /* Pétalos de lado */
+        -40px 0 0 0 orange,
+        0 40px 0 0 orange, 
+        0 -40px 0 0 orange,
+        30px 30px 0 0 orange,
+        -30px 30px 0 0 orange,
+        30px -30px 0 0 orange,
+        -30px -30px 0 0 orange,
+        20px 50px 0 0 orange, /* Pétalos adicionales */
+        -20px 50px 0 0 orange,
+        50px 20px 0 0 orange,
+        -50px 20px 0 0 orange;
+    animation-delay: 1.5s;
+}
+
+/* Animación de florecer */
+@keyframes florecer {
+    0% {
+        opacity: 0;
+        transform: scale(0.5) rotate(-10deg);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1) rotate(5deg);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+}
+/* Estilo para los recuerdos */
+.recuerdos {
+    text-align: center;
+    margin-top: 50px;
+    color: white;
+    font-size: 24px;
+    font-family: 'Arial', sans-serif;
+}
+
+.galeria {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.foto {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    opacity: 0;
+    animation: pop 0.6s ease-out forwards;
+    transform: scale(0.5);
+}
+
+/* Añadimos el retraso para que las fotos aparezcan una tras otra */
+.foto:nth-child(1) { animation-delay: 0.2s; }
+.foto:nth-child(2) { animation-delay: 0.4s; }
+.foto:nth-child(3) { animation-delay: 0.6s; }
+.foto:nth-child(4) { animation-delay: 0.8s; }
+.foto:nth-child(5) { animation-delay: 1s; }
+.foto:nth-child(6) { animation-delay: 1.2s; }
+.foto:nth-child(7) { animation-delay: 1.4s; }
+.foto:nth-child(8) { animation-delay: 1.6s; }
+.foto:nth-child(9) { animation-delay: 1.8s; }
+.foto:nth-child(10) { animation-delay: 2s; }
+
+@keyframes pop {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+audio {
+    display: none;
+}
+
